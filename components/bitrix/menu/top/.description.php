@@ -2,7 +2,7 @@
 /****************************************************
 * OBR: Delivery
 *
-* Copyright © 2013 Open Business Solutions Ltd.  
+* Copyright ï¿½ 2013 Open Business Solutions Ltd.
 *
 * All rights to this product belong to Open business solutions, LLC
 * All rights reserved and protected by Russian and international copyright laws.
