@@ -5,7 +5,7 @@ var gulp = require("gulp"),
 
     var default_path = {
       src: './',
-      dst: '../custom_template/',
+      dst: '../1c-lp/',
     }
 
     var path = {
@@ -22,7 +22,7 @@ var gulp = require("gulp"),
         components: default_path.dst+'components/',
         template: default_path.src+'components/'
       }
-      
+
 
     }
 
@@ -37,7 +37,7 @@ gulp.task('index-php', function() {
 
 gulp.task('scss', function () {
   return gulp.src(path.src.scss)
-    .pipe(sass({errLogToConsole: true})) 
+    .pipe(sass({errLogToConsole: true}))
     .pipe(gulp.dest(path.dst.scss))
     .pipe(livereload())
 });
