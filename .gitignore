@@ -4,4 +4,6 @@ node_modules/
 jade/*.jade
 img/*
 scss/*
-js-src/
+js/
+fonts/*
+img/*
