@@ -1,7 +1,30 @@
+:php
+  if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+  IncludeTemplateLangFile($_SERVER["DOCUMENT_ROOT"]."/bitrix/templates/".SITE_TEMPLATE_ID."/header.php");
+  CJSCore::Init(array("fx"));
+  $curPage = $APPLICATION->GetCurPage(true);
 doctype html
-html
-  head
-    title my jade template
-  body
-    -phpinfo()
-    
+html(lang='ru')
+    head
+        title
+          -$APPLICATION->ShowTitle()
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+        meta(name='description', content='description')
+        meta(name='keywords', content='keywords')
+        meta(name='author', content='author')
+        meta(name="robots", content="index, follow")
+
+        :php
+          $APPLICATION->ShowHead();
+          $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/colors.css");
+          $APPLICATION->SetAdditionalCSS("/bitrix/css/main/bootstrap.css");
+          $APPLICATION->SetAdditionalCSS("/bitrix/css/main/font-awesome.css");
+        //- ----- link website ----- //
+        //- link(rel='icon' href='src/img/favicon.png' type='image/x-icon')
+
+        //- ----- CSS Files ----- //
+        //- link(rel='stylesheet', href='css/style.css')
+    body
+        #panel
+          -$APPLICATION->ShowPanel();

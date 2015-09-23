@@ -2,3 +2,6 @@ node_modules/*
 components/*
 node_modules/
 jade/*.jade
+img/*
+scss/*
+js-src/
